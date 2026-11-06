@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173F5F">
+  <title>Enviar foto · EduPoint</title>
+  <link rel="icon" type="image/svg+xml" href="IMG/favicon-round.svg">
+  <link rel="icon" type="image/png" href="IMG/1.png">
+  <link rel="stylesheet" href="mobile.css">
+  <script src="mobile.js" defer></script>
+</head>
+<body>
+  <main class="mobile-shell">
+    <header class="mobile-brand"><span class="brand-icon">✓</span><div><strong>EduPoint</strong><small>Evidencia de misión</small></div></header>
+    <section class="mobile-card">
+      <div class="eyebrow">MISIÓN EN CURSO</div>
+      <h1 id="mission-title">Cargando misión…</h1>
+      <p id="mission-description">Sacá una foto clara que muestre la tarea terminada.</p>
+      <div class="points-line"><span>Puntos que vas a recibir</span><strong id="mission-points">—</strong></div>
+      <form id="photo-form">
+        <label class="upload-label" for="mission-photo">
+          <span class="camera-icon">📷</span>
+          <strong id="upload-title">Abrir cámara y sacar foto</strong>
+          <small>Usá la cámara trasera. También podés elegir una foto de la galería.</small>
+        </label>
+        <input id="mission-photo" type="file" accept="image/*" capture="environment" required>
+        <img id="photo-preview" alt="Vista previa de la foto seleccionada" hidden>
+        <button id="send-photo" type="submit" disabled>Enviar foto y completar misión</button>
+      </form>
+      <p id="status-message" class="status-message" role="status" aria-live="polite">La foto se enviará a la computadora para acreditar los puntos.</p>
+    </section>
+    <footer>La foto se guarda como comprobante de la misión.</footer>
+  </main>
+</body>
+</html>
