@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Escuela en acción">
+  <defs>
+    <clipPath id="rounded-favicon">
+      <rect x="6" y="6" width="116" height="116" rx="32" ry="32"/>
+    </clipPath>
+  </defs>
+  <rect width="128" height="128" rx="34" fill="#173F5F"/>
+  <image href="1.png" x="6" y="6" width="116" height="116" preserveAspectRatio="xMidYMid meet" clip-path="url(#rounded-favicon)"/>
+</svg>

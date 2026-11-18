@@ -1,0 +1,4 @@
+node_modules/
+evidencias/
+.env
+.DS_Store

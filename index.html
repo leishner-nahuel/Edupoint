@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173F5F">
+  <meta name="description" content="EduPoint: misiones, puntos y recompensas para cuidar nuestra institución.">
+  <title>EduPoint | Panel estudiantil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="IMG/favicon-round.svg">
+  <link rel="icon" type="image/png" href="IMG/1.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#inicio" aria-label="EduPoint, inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="IMG/2.png" alt="EduPoint" />
+        </span>
+        <span class="brand-copy"><strong>EduPoint</strong><small>Cuidamos nuestro espacio</small></span>
+      </a>
+
+      <div class="sidebar-label">MENÚ PRINCIPAL</div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-link active" data-page="inicio">
+          <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg></span>Inicio
+        </button>
+        <button class="nav-link" data-page="misiones">
+          <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>Misiones <span class="nav-count" id="mission-count">6</span>
+        </button>
+        <button class="nav-link" data-page="recompensas">
+          <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 7v14M12 7H7.5a2.5 2.5 0 1 1 2.5-2.5V7Zm0 0h4.5A2.5 2.5 0 1 0 14 4.5V7Z"/></svg></span>Recompensas
+        </button>
+        <button class="nav-link" data-page="ranking">
+          <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a4 4 0 0 0 4 4m9-6h3v2a4 4 0 0 1-4 4"/></svg></span>Ranking
+        </button>
+        <button class="nav-link" data-page="actividad">
+          <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10M2 5h.01M2 12h.01M2 19h.01"/></svg></span>Mi actividad
+        </button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-help">
+        <span class="help-symbol">✦</span>
+        <strong>Una escuela mejor</strong>
+        <p>Se construye con pequeñas acciones de todos los días.</p>
+        <button class="text-action" data-page="misiones">Ver misiones <span>→</span></button>
+      </div>
+      <div class="profile-mini">
+        <div class="avatar">ES</div>
+        <div class="profile-copy"><strong>Estudiante</strong><small>Participante · Nivel <span id="sidebar-level">4</span></small></div>
+        <button class="icon-button profile-menu" id="reset-demo" title="Reiniciar datos de demostración" aria-label="Reiniciar datos de demostración">↻</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button mobile-menu" id="mobile-menu" aria-label="Abrir menú">☰</button>
+          <div class="breadcrumb">Panel estudiantil <span>/</span> <strong id="breadcrumb-current">Inicio</strong></div>
+        </div>
+        <div class="topbar-right">
+          <span class="school-chip"><span class="live-dot"></span> Ciclo lectivo 2026</span>
+          <button class="icon-button notification-button" id="notification-button" aria-label="Notificaciones">♧<i></i></button>
+          <div class="avatar avatar-small">ES</div>
+        </div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="page-section active-page" id="page-inicio" data-section="inicio">
+          <div class="page-heading">
+            <div><p class="eyebrow">VIERNES · COMUNIDAD ESCOLAR</p><h1>¡Hola! <span>Tu escuela cuenta con vos.</span></h1><p class="muted">Cada misión completada ayuda a que nuestros espacios estén mejor.</p></div>
+            <button class="button button-outline" data-page="actividad"><span>↗</span> Ver mi actividad</button>
+          </div>
+
+          <section class="hero-card">
+            <div class="hero-content">
+              <div class="hero-kicker"><span class="sparkle">✦</span> EDUPOINT</div>
+              <h2>Cada acción suma.<br><span>Cada espacio cuenta.</span></h2>
+              <p>Participá, colaborá y ganá recompensas mientras cuidamos juntos nuestra institución.</p>
+              <button class="button button-light" data-page="misiones">Explorar misiones <span>→</span></button>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+              <div class="art-leaf leaf-one">✦</div><div class="art-leaf leaf-two">✧</div>
+              <div class="art-center"><span>♧</span><small>+1</small></div>
+              <div class="art-pill pill-top">+50 pts</div><div class="art-pill pill-bottom">¡Buen trabajo!</div>
+            </div>
+            <div class="hero-wave"></div>
+          </section>
+
+          <div class="overview-grid">
+            <article class="overview-card points-card">
+              <div class="card-topline"><span class="metric-icon gold">✦</span><span class="metric-label">Puntos disponibles</span></div>
+              <div class="metric-value" id="points-total">1.250</div>
+              <div class="metric-foot"><span class="positive-dot"></span> Disponibles para canjear</div>
+            </article>
+            <article class="overview-card level-card">
+              <div class="card-topline"><span class="metric-icon violet">⬡</span><span class="metric-label">Nivel actual</span></div>
+              <div class="metric-value" id="level-value">Nivel 4</div>
+              <div class="level-track"><span id="level-progress"></span></div>
+              <div class="metric-foot" id="level-caption">Próximo nivel: 1.500 pts</div>
+            </article>
+            <article class="overview-card missions-card">
+              <div class="card-topline"><span class="metric-icon teal">✓</span><span class="metric-label">Misiones completadas</span></div>
+              <div class="metric-value" id="completed-total">0</div>
+              <div class="metric-foot">Acciones que hacen la diferencia</div>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="panel missions-panel">
+              <div class="section-heading"><div><p class="eyebrow">PONETE EN ACCIÓN</p><h2>Misiones disponibles</h2></div><button class="link-button" data-page="misiones">Ver todas <span>→</span></button></div>
+              <div class="mission-list compact" id="home-missions"></div>
+            </section>
+            <aside class="panel team-panel">
+              <div class="section-heading"><div><p class="eyebrow">OBJETIVO COMPARTIDO</p><h2>Progreso del equipo</h2></div><span class="team-badge">Meta semanal</span></div>
+              <div class="team-progress-row"><strong id="team-progress-number">75%</strong><span>750 / 1.000 pts</span></div>
+              <div class="team-track"><span id="team-progress-bar"></span></div>
+              <p class="team-message">¡Falta poco para alcanzar la próxima meta!</p>
+              <div class="team-members"><div class="member-stack"><span>AM</span><span>JL</span><span>FC</span><span>+8</span></div><span>12 participantes activos</span></div>
+              <div class="team-goal"><span class="goal-icon">✦</span><div><strong>Meta de la semana</strong><small>Espacios limpios y listos para aprender.</small></div></div>
+            </aside>
+          </div>
+
+          <section class="reward-banner">
+            <div class="reward-banner-icon">♧</div><div><p class="eyebrow">TUS ESFUERZOS TIENEN PREMIO</p><h2>¿Ya pensaste cómo vas a usar tus puntos?</h2><p>Canjealos por kits de estudio básicos, medianos o grandes.</p></div><button class="button button-violet" data-page="recompensas">Explorar recompensas <span>→</span></button>
+          </section>
+          <p class="disclaimer">Plataforma de demostración · Los materiales y las entregas quedan sujetos a la disponibilidad de la institución.</p>
+        </section>
+
+        <section class="page-section" id="page-misiones" data-section="misiones">
+          <div class="page-heading"><div><p class="eyebrow">PEQUEÑAS ACCIONES, GRANDES CAMBIOS</p><h1>Misiones <span>disponibles</span></h1><p class="muted">Elegí una tarea, completala y sumá puntos para tu próximo objetivo. Cada nivel agrega 1 punto extra por misión, hasta el nivel 20.</p></div><div class="balance-pill"><span>✦</span><strong id="mission-balance">1.250</strong><small>puntos</small></div></div>
+          <div class="filter-bar"><div class="filter-title">Explorar por categoría</div><div class="filter-buttons" id="mission-filters"><button class="filter-button selected" data-filter="todas">Todas</button><button class="filter-button" data-filter="limpieza">Limpieza</button><button class="filter-button" data-filter="ambiente">Ambiente</button><button class="filter-button" data-filter="mantenimiento">Mantenimiento</button><button class="filter-button" data-filter="orden">Orden</button></div></div>
+          <div class="mission-grid" id="all-missions"></div>
+          <div class="info-strip"><span>📷</span><p><strong>Foto obligatoria:</strong> para completar una misión tenés que enviar una foto. Desde la PC aparecerá un QR; escanealo con el celular conectado a la misma Wi-Fi, sacá la foto y los puntos se acreditarán automáticamente.</p></div>
+        </section>
+
+        <section class="page-section" id="page-recompensas" data-section="recompensas">
+          <div class="page-heading"><div><p class="eyebrow">CANJEÁ TUS LOGROS</p><h1>Centro de <span>recompensas</span></h1><p class="muted">Canjeá tus puntos por materiales de estudio y recompensas pensadas para estudiantes de 15 años.</p></div><div class="balance-pill"><span>✦</span><strong id="reward-balance">1.250</strong><small>puntos disponibles</small></div></div>
+          <div class="reward-feature"><div class="feature-symbol">✧</div><div><span class="feature-label">TU ESFUERZO VALE</span><h2>Elegí cómo querés recibir tu recompensa.</h2><p>Hay tres opciones de kit escolar: básico, mediano y grande. Cada canje se registra en tu actividad.</p></div></div>
+          <div class="section-heading rewards-heading"><div><p class="eyebrow">MATERIALES PARA SECUNDARIA</p><h2>Elegí tu kit de estudio</h2></div><span class="section-note">Canje sujeto a disponibilidad</span></div>
+          <div class="rewards-grid" id="physical-rewards"></div>
+          <div class="info-strip reward-level-note"><span>✦</span><p><strong>Escala de canje:</strong> básica 1.000 puntos · mediana 2.000 puntos · grande 3.000 puntos. Los puntos usados no reducen tu nivel: el nivel se calcula con todos los puntos que ganaste.</p></div>
+        </section>
+
+        <section class="page-section" id="page-ranking" data-section="ranking">
+          <div class="page-heading"><div><p class="eyebrow">EL ESFUERZO SE COMPARTE</p><h1>Ranking de <span>participación</span></h1><p class="muted">Un reconocimiento a quienes ayudan a mejorar los espacios de todos.</p></div><span class="ranking-period">Esta semana · 2026</span></div>
+          <div class="ranking-highlight"><div><span class="feature-label">META COMUNITARIA</span><h2>Cuando colaboramos, <span>ganamos todos.</span></h2><p>El ranking es una forma de reconocer la participación, no una competencia obligatoria.</p></div><div class="ranking-trophy">♛</div></div>
+          <div class="panel ranking-panel"><div class="section-heading"><div><p class="eyebrow">TOP PARTICIPANTES</p><h2>Tabla de posiciones</h2></div><span class="team-badge">Demostración</span></div><div id="ranking-list"></div></div>
+        </section>
+
+        <section class="page-section" id="page-actividad" data-section="actividad">
+          <div class="page-heading"><div><p class="eyebrow">TU RECORRIDO</p><h1>Mi <span>actividad</span></h1><p class="muted">Consultá los puntos que sumaste y los canjes que realizaste.</p></div><button class="button button-outline" id="export-activity">↓ Exportar historial</button></div>
+          <div class="activity-summary"><article><small>Saldo actual</small><strong id="activity-balance">1.250 pts</strong></article><article><small>Misiones completadas</small><strong id="activity-missions">0</strong></article><article><small>Canjes realizados</small><strong id="activity-redemptions">0</strong></article></div>
+          <div class="panel activity-panel"><div class="section-heading"><div><p class="eyebrow">MOVIMIENTOS</p><h2>Historial de puntos</h2></div><span class="section-note">Guardado en este dispositivo</span></div><div class="activity-table-wrap"><table class="activity-table"><thead><tr><th>Actividad</th><th>Fecha</th><th>Tipo</th><th class="align-right">Puntos</th></tr></thead><tbody id="activity-rows"></tbody></table></div><div class="empty-state" id="activity-empty" hidden><span>◷</span><strong>Todavía no hay movimientos</strong><p>Cuando completes una misión o hagas un canje, aparecerá acá.</p></div></div>
+          <div class="reset-panel"><div><strong>¿Querés volver al estado inicial?</strong><p>Reinicia los puntos, las misiones completadas y el historial de esta demostración.</p></div><button class="button button-danger" id="reset-demo-secondary">Reiniciar demostración</button></div>
+        </section>
+
+        <footer class="site-footer"><span>EduPoint</span><span>Cada acción suma · Cada espacio cuenta</span><span>Versión demostrativa</span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <dialog class="action-modal" id="action-modal">
+    <form method="dialog" class="modal-card" id="modal-form">
+      <button class="modal-close" value="cancel" aria-label="Cerrar">×</button>
+      <div class="modal-mark" id="modal-mark">✦</div>
+      <p class="eyebrow" id="modal-eyebrow">CONFIRMAR ACCIÓN</p>
+      <h2 id="modal-title">¿Completaste la misión?</h2>
+      <p class="modal-description" id="modal-description">Sumarás puntos a tu cuenta.</p>
+      <div class="modal-extra" id="modal-extra"></div>
+      <div class="modal-actions"><button class="button button-outline" value="cancel">Volver</button><button class="button button-primary" id="modal-confirm" value="confirm">Confirmar</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

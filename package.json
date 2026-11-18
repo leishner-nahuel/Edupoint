@@ -1,0 +1,12 @@
+{
+  "name": "edupoint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EduPoint: misiones escolares y comprobantes fotográficos por QR",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
